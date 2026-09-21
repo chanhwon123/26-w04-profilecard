@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로필 카드</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome 아이콘 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts import -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="profile-card">
+        <!-- 상단 배경 디코 -->
+        <div class="card-header"></div>
+
+        <!-- 프로필 메인 컨텐츠 -->
+        <div class="card-body">
+            <div class="profile-img-container">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=400" alt="프로필 사진" class="profile-img">
+            </div>
+
+            <h2 class="profile-name">홍길동</h2>
+            <p class="profile-bio">창의적인 아이디어로 가치를 만드는 프론트엔드 개발자입니다 ✨</p>
+
+            <!-- SNS 아이콘 링크 -->
+            <div class="social-links">
+                <a href="https://github.com" target="_blank" class="social-btn github" aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" class="social-btn linkedin" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" class="social-btn instagram" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+
+            <!-- 팔로우 버튼 -->
+            <button class="follow-btn" id="followBtn">팔로우</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

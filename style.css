@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+    padding: 20px;
+}
+
+/* 프로필 카드 컨테이너 */
+.profile-card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 350px;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(142, 197, 252, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(142, 197, 252, 0.5);
+}
+
+/* 상단 배경 커버 */
+.card-header {
+    height: 120px;
+    background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+
+/* 카드 본문 */
+.card-body {
+    padding: 0 24px 32px 24px;
+    text-align: center;
+    position: relative;
+}
+
+/* 원형 프로필 이미지 */
+.profile-img-container {
+    width: 110px;
+    height: 110px;
+    margin: -55px auto 16px auto;
+    position: relative;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ffffff;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* 이름 및 소개 */
+.profile-name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.profile-bio {
+    font-size: 0.92rem;
+    color: #7f8c8d;
+    line-height: 1.5;
+    margin-bottom: 24px;
+    word-break: keep-all;
+}
+
+/* SNS 아이콘 세트 */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.social-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #f0f4f8;
+    color: #5a6b82;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: all 0.25s ease;
+}
+
+.social-btn:hover {
+    transform: translateY(-3px);
+    color: #ffffff;
+}
+
+.social-btn.github:hover {
+    background-color: #333333;
+}
+
+.social-btn.linkedin:hover {
+    background-color: #0077b5;
+}
+
+.social-btn.instagram:hover {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+/* 팔로우 버튼 */
+.follow-btn {
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 12px rgba(118, 75, 162, 0.3);
+}
+
+.follow-btn:hover {
+    opacity: 0.95;
+    box-shadow: 0 6px 16px rgba(118, 75, 162, 0.4);
+}
+
+.follow-btn.following {
+    background: #e2e8f0;
+    color: #4a5568;
+    box-shadow: none;
+}
+
+/* 모바일 전용 미디어 쿼리 반응형 대응 */
+@media (max-width: 480px) {
+    .profile-card {
+        max-width: 100%;
+        border-radius: 20px;
+    }
+
+    .card-header {
+        height: 100px;
+    }
+
+    .profile-img-container {
+        width: 95px;
+        height: 95px;
+        margin-top: -47px;
+    }
+
+    .profile-name {
+        font-size: 1.25rem;
+    }
+
+    .profile-bio {
+        font-size: 0.88rem;
+    }
+
+    .social-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+}
